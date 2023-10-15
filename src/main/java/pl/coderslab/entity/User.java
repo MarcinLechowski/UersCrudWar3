@@ -1,12 +1,21 @@
 package pl.coderslab.entity;
 
 public class User {
-    //W klasie dodaj następujące atrybuty (wszystkie prywatne):
-
     private int id;
     private String userName;
     private String email;
     private String password;
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 
     public int getId() {
         return id;
