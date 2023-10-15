@@ -13,7 +13,7 @@
 
     <title>SB Admin 2 - Dashboard</title>
 
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
@@ -44,7 +44,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="${pageContext.request.contextPath}/theme/index.jsp" disabled="true">
+            <a class="nav-link" href="${pageContext.request.contextPath}/theme/index.jsp">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -54,20 +54,54 @@
         <div id="content">
 
             <!-- End of Topbar -->
-            <%@ include file="header.jsp" %>
+            <%@ include file="../theme/header.jsp" %>
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    <a href="<c:url value="/users/list"/>"
-                       class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Lista użytkowników</a>
+                    <a href="${pageContext.request.contextPath}/users/add"
+                       class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Dodaj użytkownika</a>
                 </div>
+                <!-- Page Heading -->
+
+
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Szczegóły użytkownika</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                                <tbody>
+
+                                <tr>
+                                    <td>Id</td>
+                                    <td>${user.id}</td>
+                                </tr>
+                                <tr>
+                                    <td>Nazwa użytkownika</td>
+                                    <td>${user.userName}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>${user.email}</td>
+                                </tr>
+
+                                </tbody>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- End of Main Content -->
-
             <!-- Footer -->
-            <%@ include file="footer.jsp" %>
+            <%@ include file="../theme/footer.jsp" %>
             <!-- End of Footer -->
 
         </div>

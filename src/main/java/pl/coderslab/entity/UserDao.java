@@ -48,7 +48,6 @@ public class UserDao {
                 user.setUserName(resultSet.getString("username"));
                 user.setEmail(resultSet.getString("email"));
                 user.setPassword(resultSet.getString("password"));
-                System.out.println(user);
                 return user;
             }
         } catch (SQLException e) {
