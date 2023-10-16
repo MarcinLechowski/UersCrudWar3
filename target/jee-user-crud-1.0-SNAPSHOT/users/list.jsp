@@ -98,7 +98,7 @@
                                                     </p>
                                                     <p>
                                                         <a class="link-opacity-10-hover"
-                                                           href="${pageContext.request.contextPath}/users/show?id=${user.id}">Pokaż</a>
+                                                           href="${pageContext.request.contextPath}/users/details?id=${user.id}">Pokaż</a>
                                                     </p>
                                                 </div>
                                             </td>
